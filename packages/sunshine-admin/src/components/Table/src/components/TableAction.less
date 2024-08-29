@@ -1,0 +1,51 @@
+@prefix-cls: ~'@{namespace}-basic-table-action';
+
+.@{prefix-cls} {
+  display: flex;
+  align-items: center;
+
+  .action-divider {
+    display: table;
+  }
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 0 !important;
+    }
+  }
+
+  button.ant-btn-circle {
+    span {
+      margin: auto !important;
+    }
+  }
+
+  .ant-divider,
+  .ant-divider-vertical {
+    margin: 0 2px;
+  }
+
+  .icon-more {
+    transform: rotate(90deg);
+
+    svg {
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+  }
+}

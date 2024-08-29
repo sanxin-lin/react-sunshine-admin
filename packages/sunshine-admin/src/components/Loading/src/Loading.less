@@ -1,0 +1,29 @@
+.full-loading {
+  display: flex;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(240 242 245 / 40%);
+
+  &.absolute {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    left: 0;
+  }
+}
+
+html[data-theme='dark'] {
+  .full-loading:not(.light) {
+    background-color: @modal-mask-bg;
+  }
+}
+
+.full-loading.dark {
+  background-color: @modal-mask-bg;
+}

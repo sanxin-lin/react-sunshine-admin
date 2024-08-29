@@ -1,0 +1,60 @@
+@header-height: 60px;
+@detail-header-height: 40px;
+@prefix-cls: ~'@{namespace}-basic-drawer';
+@prefix-cls-detail: ~'@{namespace}-basic-drawer__detail';
+
+.@{prefix-cls} {
+  .ant-drawer-wrapper-body {
+    overflow: hidden;
+  }
+
+  .ant-drawer-close {
+    &:hover {
+      color: @error-color;
+    }
+  }
+
+  .ant-drawer-body {
+    height: calc(100% - @header-height);
+    padding: 0;
+    background-color: @component-background;
+
+    .scrollbar__wrap {
+      margin-bottom: 0 !important;
+      padding: 16px !important;
+    }
+
+    > .scrollbar > .scrollbar__bar.is-horizontal {
+      display: none;
+    }
+  }
+}
+
+.@{prefix-cls-detail} {
+  position: absolute;
+
+  .ant-drawer-header {
+    box-sizing: border-box;
+    width: 100%;
+    height: @detail-header-height;
+    padding: 0;
+    border-top: 1px solid @border-color-base;
+  }
+
+  .ant-drawer-title {
+    height: 100%;
+  }
+
+  .ant-drawer-close {
+    height: @detail-header-height;
+    line-height: @detail-header-height;
+  }
+
+  .scrollbar__wrap {
+    padding: 0 !important;
+  }
+
+  .ant-drawer-body {
+    height: calc(100% - @detail-header-height);
+  }
+}

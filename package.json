@@ -1,0 +1,50 @@
+{
+  "name": "react-sunshine-admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:prettier": "prettier --write .",
+    "lint:stylelint": "stylelint \"**/*.{css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
+    "prepare": "husky install",
+    "preview": "vite preview",
+    "sunshine:build": "pnpm --filter ./packages/sunshine-admin run build",
+    "sunshine:dev": "pnpm --filter ./packages/sunshine-admin run dev"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "*.{scss,less,styl,html}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-packagejson": "^2.5.0",
+    "stylelint": "^16.4.0",
+    "turbo": "^1.13.3"
+  },
+  "devDependencies": {
+    "@sunshine/eslint-config": "workspace:*",
+    "@sunshine/stylelint-config": "workspace:*",
+    "@sunshine/ts-config": "workspace:*",
+    "@sunshine/types": "workspace:*",
+    "@sunshine/vite-config": "workspace:*"
+  }
+}

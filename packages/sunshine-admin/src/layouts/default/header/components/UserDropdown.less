@@ -1,0 +1,51 @@
+@prefix-cls: ~'@{namespace}-header-user-dropdown';
+
+.@{prefix-cls} {
+  align-items: center;
+  height: @header-height;
+  padding: 0 0 0 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  font-size: 12px;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+  &__header {
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 14px;
+  }
+
+  &--dark {
+    &:hover {
+      background-color: @header-dark-bg-hover-color;
+    }
+  }
+
+  &--light {
+    &:hover {
+      background-color: @header-light-bg-hover-color;
+    }
+
+    .@{prefix-cls}__name {
+      color: @text-color-base;
+    }
+
+    .@{prefix-cls}__desc {
+      color: @header-light-desc-color;
+    }
+  }
+
+  &-dropdown-overlay {
+    .ant-dropdown-menu-item {
+      min-width: 160px;
+    }
+  }
+}

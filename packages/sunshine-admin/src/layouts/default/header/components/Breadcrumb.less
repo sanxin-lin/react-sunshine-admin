@@ -1,0 +1,51 @@
+@prefix-cls: ~'@{namespace}-layout-breadcrumb';
+
+.@{prefix-cls} {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+
+  .ant-breadcrumb-link {
+    .anticon {
+      margin-right: 4px;
+      margin-bottom: 2px;
+    }
+  }
+
+  &--light {
+    .ant-breadcrumb-link {
+      color: @breadcrumb-item-normal-color;
+
+      a {
+        color: rgb(0 0 0 / 65%);
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: @breadcrumb-item-normal-color;
+    }
+  }
+
+  &--dark {
+    .ant-breadcrumb-link {
+      color: rgb(255 255 255 / 60%);
+
+      a {
+        color: rgb(255 255 255 / 80%);
+
+        &:hover {
+          color: @white;
+        }
+      }
+    }
+
+    .ant-breadcrumb-separator,
+    .anticon {
+      color: rgb(255 255 255 / 80%);
+    }
+  }
+}

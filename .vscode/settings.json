@@ -1,0 +1,41 @@
+{
+  // 光标的动画样式
+  "editor.cursorBlinking": "phase",
+  // 光标是否启用平滑插入的动画
+  "editor.cursorSmoothCaretAnimation": "on",
+  //  使用当前项目的prettier配置文件，如果没有则使用默认的配置
+  "prettier.requireConfig": true,
+  "editor.formatOnSave": true,
+  // 以下程序使用prettier默认进行格式化
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 保存文件的时候的配置
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "i18n-ally.localesPaths": ["src/locales", "src/locales/lang"]
+}

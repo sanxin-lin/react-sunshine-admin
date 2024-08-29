@@ -1,0 +1,33 @@
+@prefix-cls: ~'@{namespace}-basic-arrow';
+
+.@{prefix-cls} {
+  display: inline-block;
+  transform: rotate(0deg);
+  transform-origin: center center;
+  transition: all 0.3s ease 0.1s;
+  cursor: pointer;
+
+  &--active {
+    transform: rotate(90deg);
+  }
+
+  &.inset {
+    line-height: 0px;
+  }
+
+  &.up {
+    transform: rotate(-90deg);
+  }
+
+  &.down {
+    transform: rotate(90deg);
+  }
+
+  &.up.@{prefix-cls}--active {
+    transform: rotate(90deg);
+  }
+
+  &.down.@{prefix-cls}--active {
+    transform: rotate(-90deg);
+  }
+}

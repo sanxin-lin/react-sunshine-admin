@@ -1,0 +1,31 @@
+@prefix-cls: ~'@{namespace}-setting-theme-picker';
+
+.@{prefix-cls} {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 16px 0;
+
+  &__item {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+
+    svg {
+      display: none;
+    }
+
+    &--active {
+      border: 1px solid lighten(@primary-color, 10%);
+
+      svg {
+        display: inline-block;
+        margin: 0 0 3px 3px;
+        fill: @white !important;
+        font-size: 12px;
+      }
+    }
+  }
+}

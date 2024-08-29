@@ -1,0 +1,40 @@
+@prefix-cls: ~'@{namespace}-dark-switch';
+
+html[data-theme='dark'] {
+  .@{prefix-cls} {
+    border: 1px solid rgb(196 188 188);
+  }
+}
+
+.@{prefix-cls} {
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 26px;
+  padding: 0 6px;
+  margin-left: auto;
+  cursor: pointer;
+  background-color: #151515;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: space-between;
+
+  &-inner {
+    position: absolute;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition:
+      transform 0.5s,
+      background-color 0.5s;
+    will-change: transform;
+  }
+
+  &--dark {
+    .@{prefix-cls}-inner {
+      transform: translateX(calc(100% + 2px));
+    }
+  }
+}

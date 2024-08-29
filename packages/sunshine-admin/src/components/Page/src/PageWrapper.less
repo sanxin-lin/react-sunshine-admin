@@ -1,0 +1,27 @@
+@prefix-cls: ~'@{namespace}-page-wrapper';
+
+.@{prefix-cls} {
+  position: relative;
+
+  .@{prefix-cls}-content {
+    margin: 16px;
+  }
+
+  .ant-page-header {
+    // background: #fff;
+    padding: 20px 24px;
+    &:empty {
+      padding: 0;
+    }
+  }
+
+  &-content-bg {
+    background-color: @component-background;
+  }
+
+  &--dense {
+    .@{prefix-cls}-content {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@prefix-cls: ~'@{namespace}-basic-drawer-header';
+@footer-height: 60px;
+.@{prefix-cls} {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &__back {
+    padding: 0 12px;
+    cursor: pointer;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  &__twrap {
+    flex: 1;
+    font-size: inherit;
+    font-weight: inherit;
+
+    span {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  &__toolbar {
+    padding-right: 50px;
+  }
+}

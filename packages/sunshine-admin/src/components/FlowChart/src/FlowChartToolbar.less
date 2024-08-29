@@ -1,0 +1,26 @@
+@prefix-cls: ~'@{namespace}-flow-chart-toolbar';
+
+html[data-theme='dark'] {
+  .lf-dnd {
+    background: #080808;
+  }
+}
+.@{prefix-cls} {
+  height: 36px;
+  border-bottom: 1px solid @border-color-base;
+  background-color: @app-content-background;
+
+  .disabeld {
+    color: @disabled-color;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2px 4px;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+}

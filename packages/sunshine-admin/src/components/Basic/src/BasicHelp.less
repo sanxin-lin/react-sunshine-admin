@@ -1,0 +1,19 @@
+@prefix-cls: ~'@{namespace}-basic-help';
+
+.@{prefix-cls} {
+  display: inline-block;
+  margin-left: 6px;
+  color: @text-color-help-dark;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: @primary-color;
+  }
+
+  &__wrap {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

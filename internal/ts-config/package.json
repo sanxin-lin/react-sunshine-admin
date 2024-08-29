@@ -1,0 +1,16 @@
+{
+  "name": "@sunshine/ts-config",
+  "version": "1.0.0",
+  "license": "ISC",
+  "type": "module",
+  "files": [
+    "base.json",
+    "node.json",
+    "app.json",
+    "node-server.json"
+  ],
+  "dependencies": {
+    "@types/node": "^20.12.7",
+    "vite": "^5.2.10"
+  }
+}

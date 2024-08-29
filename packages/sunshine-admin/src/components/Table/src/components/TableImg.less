@@ -1,0 +1,20 @@
+@prefix-cls: ~'@{namespace}-basic-table-img';
+
+.@{prefix-cls} {
+  .ant-image {
+    margin-right: 4px;
+    cursor: zoom-in;
+
+    img {
+      border-radius: 2px;
+    }
+  }
+
+  .img-div {
+    display: inline-grid;
+
+    > .ant-image:nth-of-type(n + 2) {
+      display: none;
+    }
+  }
+}
