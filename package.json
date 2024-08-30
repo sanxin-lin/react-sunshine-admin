@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "turbo run stub",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:prettier": "prettier --write .",
     "lint:stylelint": "stylelint \"**/*.{css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
